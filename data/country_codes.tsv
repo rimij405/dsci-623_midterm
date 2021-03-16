@@ -1,0 +1,162 @@
+ID	Code	Country
+4	AFG	Afghanistan
+5	ALB	Albania
+6	DZA	Algeria
+7	AND	Andorra
+8	AGO	Angola
+10	ATG	Antigua and Barbuda
+11	ARG	Argentina
+12	ARM	Armenia
+14	AUS	Australia
+15	AUT	Austria
+16	AZE	Azerbaijan
+18	BHR	Bahrain
+19	BGD	Bangladesh
+20	BRB	Barbados
+21	BEL	Belgium
+22	BLZ	Belize
+23	BEN	Benin
+25	BTN	Bhutan
+26	BOL	Bolivia
+29	BWA	Botswana
+30	BRA	Brazil
+32	BGR	Bulgaria
+33	BFA	Burkina Faso
+34	BDI	Burundi
+35	BLR	Belarus
+36	KHM	Cambodia
+37	CMR	Cameroon
+38	CAN	Canada
+41	CAF	Central African Republic
+42	TCD	Chad
+43	CHL	Chile
+44	CHN	China
+45	COL	Colombia
+46	COM	Comoros
+49	CRI	Costa Rica
+50	HRV	Croatia
+51	CUB	Cuba
+53	CYP	Cyprus
+54	CZE	Czech Republic
+55	DNK	Denmark
+56	DJI	Djibouti
+57	DMA	Dominica
+58	DOM	Dominican Republic
+59	ECU	Ecuador
+61	SLV	El Salvador
+62	GNQ	Equatorial Guinea
+63	ERI	Eritrea
+64	EST	Estonia
+65	ETH	Ethiopia
+67	FJI	Fiji
+68	FIN	Finland
+69	FRA	France
+71	PYF	French Polynesia
+72	GAB	Gabon
+74	GEO	Georgia
+75	DEU	Germany
+76	GHA	Ghana
+78	GRC	Greece
+80	GRD	Grenada
+83	GTM	Guatemala
+84	GIN	Guinea
+85	GNB	Guinea-Bissau
+86	GUY	Guyana
+87	HTI	Haiti
+88	HND	Honduras
+90	HUN	Hungary
+91	ISL	Iceland
+92	IND	India
+93	IDN	Indonesia
+95	IRQ	Iraq
+96	IRL	Ireland
+97	ISR	Israel
+98	ITA	Italy
+100	JAM	Jamaica
+101	JPN	Japan
+102	JOR	Jordan
+103	KAZ	Kazakhstan
+104	KEN	Kenya
+106	KWT	Kuwait
+109	LVA	Latvia
+110	LBN	Lebanon
+111	LSO	Lesotho
+112	LBR	Liberia
+113	LBY	Libya
+115	LTU	Lithuania
+116	LUX	Luxembourg
+119	MDG	Madagascar
+120	MWI	Malawi
+121	MYS	Malaysia
+122	MDV	Maldives
+123	MLI	Mali
+124	MLT	Malta
+128	MRT	Mauritania
+129	MUS	Mauritius
+130	MEX	Mexico
+132	MDA	Moldova
+136	MAR	Morocco
+137	MOZ	Mozambique
+138	MMR	Myanmar
+139	NAM	Namibia
+141	NPL	Nepal
+142	NLD	Netherlands
+143	NCL	New Caledonia
+144	NZL	New Zealand
+145	NIC	Nicaragua
+146	NER	Niger
+147	NGA	Nigeria
+151	NOR	Norway
+153	PAK	Pakistan
+156	PAN	Panama
+157	PNG	Papua New Guinea
+158	PRY	Paraguay
+159	PER	Peru
+160	PHL	Philippines
+161	POL	Poland
+162	PRT	Portugal
+164	QAT	Qatar
+166	ROU	Romania
+168	RWA	Rwanda
+173	SAU	Saudi Arabia
+174	SEN	Senegal
+176	SYC	Seychelles
+177	SLE	Sierra Leone
+178	SGP	Singapore
+179	SVK	Slovak Republic
+180	SVN	Slovenia
+181	SLB	Solomon Islands
+182	SOM	Somalia
+183	ZAF	South Africa
+185	ESP	Spain
+186	LKA	Sri Lanka
+189	KNA	St. Kitts and Nevis
+190	LCA	St. Lucia
+195	SDN	Sudan
+196	SUR	Suriname
+197	SWZ	Swaziland
+198	SWE	Sweden
+199	CHE	Switzerland
+202	TJK	Tajikistan
+203	TZA	Tanzania
+204	TGO	Togo
+205	THA	Thailand
+207	TTO	Trinidad and Tobago
+208	TUN	Tunisia
+209	TUR	Turkey
+210	TKM	Turkmenistan
+213	UGA	Uganda
+214	UKR	Ukraine
+215	ARE	United Arab Emirates
+217	USA	United States
+218	URY	Uruguay
+219	UZB	Uzbekistan
+220	VUT	Vanuatu
+223	VNM	Vietnam
+230	ZMB	Zambia
+231	ZWE	Zimbabwe
+603	GBR	United Kingdom
+1001	SRB	Serbia
+1002	MNE	Montenegro
+1003	XKX	Kosovo
+1004	SSD	South Sudan
