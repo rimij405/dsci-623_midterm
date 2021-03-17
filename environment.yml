@@ -135,4 +135,3 @@ dependencies:
   - pip:
     - docformatter==1.4
     - untokenize==0.1.1
-prefix: A:\Apps\Anaconda3\envs\data
