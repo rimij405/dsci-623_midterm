@@ -1,8 +1,35 @@
 # parser.py - Special parser for reading and writing *.tsv files with pandas.
 
-# Import pandas library.
+# Import pandas library for parsing dataframes.
 import pandas as pd
 
+# For parsing MFI tables specifically.
+def read_mfi(path, title="Metric", countries=['AFG', 'JPN']):
+    """Special parser for reading an MFI table.
+
+    :param path: Path to the table to parse.
+    :param title: fieldname to assign the value column, defaults to 'Metric'    
+    """
+    # Parse the MFI table.
+    df = read_tsv(path)
+
+    # Rename the columns.
+    df.columns = [ "Code", "Country", "Year", title ]
+
+    # Select only the entries that have matching codes.
+    df = df[df["Code"].isin(countries)]
+    
+    # Replace 'Year' column with DataTime type values.
+    df['Year'] = pd.to_datetime(df['Year'], format="%Y")
+    
+    # Create a MultiIndex in the pd.DataFrame.
+    df = df.set_index(['Code', 'Year'], drop=True)
+        
+    # Sort by country and year.
+    df = df.sort_index(ascending=True)
+
+    # Return the table.
+    return df
 
 def read_tsv(filepath_or_buffer, **kwargs):
     """Read a tab-separated values (tsv) file into DataFrame.

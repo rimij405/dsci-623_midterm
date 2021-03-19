@@ -1,44 +1,39 @@
 # formatter.py - Helper functions for analysis.
 
+def format_obj(obj, layout='{}', sep=None):
+    """Given an obj or dict[obj] and a format, returns formatted strings.
 
-def format_key(id, code=None, name=None):
-    """Get key as formatted string.
+    :param obj: iterable[obj] or obj, containing info to print.
+    :param layout: str, the format one object should be printed with, defaults to '{}'
+    :param sep: str, the delimeter for joining, defaults to None.
+    :raise ValueError: Raises ValueError if layout passed is invalid.
+    :return: list[str] or str, containing necessary information. Returns the default layout if no object is passed.
+    """    
+    # If layout is None, default to '{}'
+    if layout is None or not isinstance(layout, str):
+        raise ValueError("Cannot print object without formatted string.")
+        
+    # If object is None, return the layout without any preprocessing.
+    if obj is None:
+        return layout
+
+    def format_item(item):        
+        return layout.format(item)
     
-    :param id: ID or entire composite key.
-    :param code: Country code.
-    :param name: Country plaintext name.
-    :return: Return formatted string.
-    """
-    if code is None and name is None:
-        id, code, name = id
-    return f'< "{code}": ({id}) "{name}" >'
+    def format_iterable(list_obj):        
+        return [format_item(item) for item in list_obj]    
+    
+    try:
+        results = format_iterable(obj)
+        if len(results) == 0:
+            return layout
+        
+        if sep is None:
+            return results
+        else:
+            return sep.join(results)
+    except TypeError as e:
+        print(f'`{obj}` is not an iterable. Formatting single item.')
+        pass
 
-
-def format_keys(country_keys, *remaining_keys):
-    """Get collection of several keys.
-
-    :param keys: Single key or iterable containing several keys.
-    :param remaining_keys: Remaining keys.
-    :return: Return collection of formatted strings.
-    """
-    # Prepare collection for iteration.
-    terms = []
-
-    # If first argument is provided...
-    if country_keys and len(country_keys) > 0:
-        try:
-            terms.extend(list(country_keys))
-        except TypeError:
-            # Ignore if not iterable.
-            pass
-
-    # Check if remaining_keys should be added.
-    if remaining_keys and len(remaining_keys) > 0:
-        try:
-            terms.extend(list(remaining_keys))
-        except TypeError:
-            # Ignore if not iterable.
-            pass
-
-    # Return the formatted string for each.
-    return "\n".join([f"{format_key(*term)}" for term in terms])
+    return format_item(obj)
