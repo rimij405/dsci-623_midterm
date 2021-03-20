@@ -19,14 +19,20 @@ def read_mfi(path, title="Metric", countries=['AFG', 'JPN']):
     # Select only the entries that have matching codes.
     df = df[df["Code"].isin(countries)]
     
-    # Replace 'Year' column with DataTime type values.
-    df['Year'] = pd.to_datetime(df['Year'], format="%Y")
+    # Add 'Time' column with DataTime type values.
+    # df['Time'] = pd.to_datetime(df['Year'], format="%Y")
     
     # Create a MultiIndex in the pd.DataFrame.
-    df = df.set_index(['Code', 'Year'], drop=True)
+    # df = df.set_index(['Code', 'Time'], drop=True)
         
     # Sort by country and year.
-    df = df.sort_index(ascending=True)
+    df = df.sort_values(by=['Code', 'Year'], ascending=True)
+    
+    # Retain the old index.
+    df = df.reset_index(drop=False)
+    
+    # Rename the index category.
+    df = df.rename(columns={'index': 'original_index'})    
 
     # Return the table.
     return df
