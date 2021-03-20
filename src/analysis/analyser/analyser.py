@@ -116,6 +116,18 @@ def spread():
     return _spread
 
 
+def mode():
+    """Calculate the most frequently occurring value.
+    
+    :return: Returns function for use in pd.DataFrame.agg() calls.
+    """    
+    
+    def _mode(x):
+        return x.value_counts().index[0]
+    _mode.__name__ = "mode"
+    return _mode
+    
+
 def agg(df, target, fns):
     """Describe common aggregate statistics regarding the MFI dataset.
 
